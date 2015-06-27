@@ -498,9 +498,9 @@ class Response implements ResponseInterface, InjectionAwareInterface
 	 * @param int jsonOptions
 	 * @return Phalcon\Http\Response
 	 */
-	public function setJsonContent(var content, jsonOptions = 0) -> <Response>
+	public function setJsonContent(var content, jsonOptions = 0, deepth = 512) -> <Response>
 	{
-		let this->_content = json_encode(content, jsonOptions);
+		let this->_content = json_encode(content, jsonOptions, depth);
 		return this;
 	}
 
